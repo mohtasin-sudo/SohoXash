@@ -11,8 +11,9 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="bg-zinc-50 text-zinc-900 antialiased">
+        @include('partials.desktop-sidebar', ['active' => 'support'])
 
-        <div class="mx-auto w-full max-w-xl bg-white md:max-w-3xl md:rounded-none">
+        <div class="w-full bg-white md:ml-56 md:min-h-screen">
 
             <header class="dash-header">
                 <button

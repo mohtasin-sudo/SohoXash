@@ -15,3 +15,8 @@ Route::get('/support-ticket/{ticketId}', function (string $ticketId) {
 })->name('support.ticket.show');
 Route::get('/gift-card', fn() => view('gift-card'))->name('gift.card');
 Route::get('/news-feed', fn() => view('news-feed'))->name('news.feed');
+Route::get('/referrals', fn() => view('referrals'))->name('referrals');
+Route::get('/my-jobs', fn() => view('jobs'))->name('jobs.index');
+Route::get('/my-jobs/{jobId}', function (string $jobId) {
+    return view('job-show', ['jobId' => $jobId]);
+})->name('jobs.show');

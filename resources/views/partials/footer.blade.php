@@ -29,8 +29,9 @@
                 <div class="mt-2.5 space-y-1.5 text-sm text-zinc-500">
                     <a href="{{ route('dashboard') }}" class="block transition-colors hover:text-zinc-900">Dashboard</a>
                     <a href="{{ route('partner') }}" class="block transition-colors hover:text-zinc-900">Partner Program</a>
+                    <a href="{{ route('referrals') }}" class="block transition-colors hover:text-zinc-900">Referrals</a>
                     <a href="{{ route('gift.card') }}" class="block transition-colors hover:text-zinc-900">Gift Card Redeem</a>
-                    <a href="#" class="block transition-colors hover:text-zinc-900">Tasks</a>
+                    <a href="{{ route('jobs.index') }}" class="block transition-colors hover:text-zinc-900">Tasks</a>
                     <a href="#" class="block transition-colors hover:text-zinc-900">Earnings</a>
                 </div>
             </div>
