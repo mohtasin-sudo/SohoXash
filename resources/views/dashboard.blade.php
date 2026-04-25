@@ -55,6 +55,10 @@
                     <i class="bi bi-wallet2 text-base"></i>
                     Earnings
                 </a>
+                <a href="{{ route('gift.card') }}" class="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-500 transition-colors hover:bg-zinc-50 hover:text-zinc-900">
+                    <i class="bi bi-gift text-base"></i>
+                    Gift Card
+                </a>
                 <a href="#" class="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-500 transition-colors hover:bg-zinc-50 hover:text-zinc-900">
                     <i class="bi bi-people text-base"></i>
                     Referrals
@@ -63,6 +67,10 @@
                     <i class="bi bi-bell text-base"></i>
                     Notifications
                     <span class="ml-auto flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[9px] font-black text-white">3</span>
+                </a>
+                <a href="{{ route('news.feed') }}" class="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-500 transition-colors hover:bg-zinc-50 hover:text-zinc-900">
+                    <i class="bi bi-newspaper text-base"></i>
+                    News Feed
                 </a>
                 <p class="mb-1 mt-3 px-2 text-[10px] font-bold uppercase tracking-widest text-zinc-300">Account</p>
                 <a href="#" class="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-500 transition-colors hover:bg-zinc-50 hover:text-zinc-900">
@@ -73,7 +81,7 @@
                     <i class="bi bi-gear text-base"></i>
                     Settings
                 </a>
-                <a href="#" class="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-500 transition-colors hover:bg-zinc-50 hover:text-zinc-900">
+                <a href="{{ route('support.ticket') }}" class="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-500 transition-colors hover:bg-zinc-50 hover:text-zinc-900">
                     <i class="bi bi-life-preserver text-base"></i>
                     Support
                 </a>
@@ -161,14 +169,14 @@
                         <i class="bi bi-cash-stack"></i>
                         <span>Salary</span>
                     </a>
-                    <a href="#" class="flex flex-none items-center gap-1.5 rounded-lg border border-zinc-100 bg-zinc-50 px-3 py-1.5 text-xs font-semibold text-zinc-600 transition-colors hover:border-zinc-200 hover:bg-zinc-100">
+                    <button type="button" data-open-modal="live-transactions-modal" class="flex flex-none items-center gap-1.5 rounded-lg border border-zinc-100 bg-zinc-50 px-3 py-1.5 text-xs font-semibold text-zinc-600 transition-colors hover:border-zinc-200 hover:bg-zinc-100">
                         <i class="bi bi-broadcast"></i>
                         <span>Live</span>
-                    </a>
-                    <a href="#" class="flex flex-none items-center gap-1.5 rounded-lg border border-zinc-100 bg-zinc-50 px-3 py-1.5 text-xs font-semibold text-zinc-600 transition-colors hover:border-zinc-200 hover:bg-zinc-100">
+                    </button>
+                    <button type="button" data-open-modal="leaderboard-modal" class="flex flex-none items-center gap-1.5 rounded-lg border border-zinc-100 bg-zinc-50 px-3 py-1.5 text-xs font-semibold text-zinc-600 transition-colors hover:border-zinc-200 hover:bg-zinc-100">
                         <i class="bi bi-trophy"></i>
                         <span>Leader</span>
-                    </a>
+                    </button>
                 </div>
             </div>
 
@@ -398,6 +406,131 @@
         @include('partials.footer', ['class' => 'border-t border-zinc-100 bg-white'])
 
         </div>{{-- end main shell --}}
+
+        <div id="live-transactions-modal" data-modal class="modal-overlay fixed inset-0 z-[80] hidden items-end justify-center bg-zinc-900/50 p-3 sm:items-center">
+            <div class="modal-card w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-2xl">
+                <div class="relative overflow-hidden border-b border-zinc-100 bg-gradient-to-r from-zinc-900 to-zinc-700 px-4 py-3 text-white">
+                    <div class="pointer-events-none absolute -right-5 -top-5 h-14 w-14 rounded-full bg-white/10"></div>
+                    <div class="pointer-events-none absolute -bottom-6 right-6 h-12 w-12 rounded-full bg-white/10"></div>
+                    <div class="relative flex items-start justify-between gap-2">
+                        <div>
+                            <p class="text-sm font-black">Live Transactions</p>
+                            <p class="text-[11px] text-zinc-300">Real-time payouts from active users</p>
+                            <div class="mt-2 inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-2 py-0.5 text-[10px] font-semibold text-zinc-200">
+                                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Live now
+                            </div>
+                        </div>
+                        <button type="button" data-close-modal class="flex h-8 w-8 items-center justify-center rounded-lg text-zinc-300 hover:bg-white/10 hover:text-white">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2 border-b border-zinc-100 bg-zinc-50 p-3">
+                    <div class="rounded-lg border border-zinc-200 bg-white px-2 py-1.5 text-center">
+                        <p class="text-[9px] text-zinc-400">Transactions</p>
+                        <p class="text-xs font-black text-zinc-900">1,248</p>
+                    </div>
+                    <div class="rounded-lg border border-zinc-200 bg-white px-2 py-1.5 text-center">
+                        <p class="text-[9px] text-zinc-400">This hour</p>
+                        <p class="text-xs font-black text-zinc-900">৳5,420</p>
+                    </div>
+                    <div class="rounded-lg border border-zinc-200 bg-white px-2 py-1.5 text-center">
+                        <p class="text-[9px] text-zinc-400">Avg payout</p>
+                        <p class="text-xs font-black text-zinc-900">৳102</p>
+                    </div>
+                </div>
+
+                <div class="max-h-[58vh] space-y-2 overflow-y-auto p-4">
+                    <div class="flex items-center justify-between rounded-xl border border-emerald-100 bg-emerald-50/60 px-3 py-2.5">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[11px] font-black text-zinc-700 ring-1 ring-emerald-100">RA</span>
+                            <div><p class="text-xs font-semibold text-zinc-900">Rahim*** · bKash</p><p class="text-[10px] text-zinc-400">Just now</p></div>
+                        </div>
+                        <span class="text-xs font-black text-emerald-700">+৳120</span>
+                    </div>
+                    <div class="flex items-center justify-between rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[11px] font-black text-zinc-700 ring-1 ring-zinc-200">KA</span>
+                            <div><p class="text-xs font-semibold text-zinc-900">Karim*** · Nagad</p><p class="text-[10px] text-zinc-400">2 min ago</p></div>
+                        </div>
+                        <span class="text-xs font-black text-emerald-700">+৳75</span>
+                    </div>
+                    <div class="flex items-center justify-between rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[11px] font-black text-zinc-700 ring-1 ring-zinc-200">SH</span>
+                            <div><p class="text-xs font-semibold text-zinc-900">Shuvo*** · Rocket</p><p class="text-[10px] text-zinc-400">4 min ago</p></div>
+                        </div>
+                        <span class="text-xs font-black text-emerald-700">+৳200</span>
+                    </div>
+                    <div class="flex items-center justify-between rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[11px] font-black text-zinc-700 ring-1 ring-zinc-200">MI</span>
+                            <div><p class="text-xs font-semibold text-zinc-900">Mitu*** · bKash</p><p class="text-[10px] text-zinc-400">6 min ago</p></div>
+                        </div>
+                        <span class="text-xs font-black text-emerald-700">+৳50</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="leaderboard-modal" data-modal class="modal-overlay fixed inset-0 z-[80] hidden items-end justify-center bg-zinc-900/50 p-3 sm:items-center">
+            <div class="modal-card w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-2xl">
+                <div class="relative overflow-hidden border-b border-zinc-100 bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-3 text-white">
+                    <div class="pointer-events-none absolute -right-4 -top-4 h-14 w-14 rounded-full bg-white/15"></div>
+                    <div class="relative flex items-start justify-between gap-2">
+                        <div>
+                            <p class="text-sm font-black">Referral Leaderboard</p>
+                            <p class="text-[11px] text-amber-100">Top performers this week</p>
+                            <div class="mt-2 inline-flex items-center gap-1 rounded-full border border-white/25 bg-white/10 px-2 py-0.5 text-[10px] font-semibold text-amber-50">
+                                Updated 2 min ago
+                            </div>
+                        </div>
+                        <button type="button" data-close-modal class="flex h-8 w-8 items-center justify-center rounded-lg text-amber-100 hover:bg-white/10 hover:text-white">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2 border-b border-zinc-100 bg-zinc-50 p-3">
+                    <div class="rounded-lg border border-zinc-200 bg-white px-2 py-1.5 text-center">
+                        <p class="text-[9px] text-zinc-400">Total Referrals</p>
+                        <p class="text-xs font-black text-zinc-900">486</p>
+                    </div>
+                    <div class="rounded-lg border border-zinc-200 bg-white px-2 py-1.5 text-center">
+                        <p class="text-[9px] text-zinc-400">Top Reward</p>
+                        <p class="text-xs font-black text-zinc-900">৳330</p>
+                    </div>
+                    <div class="rounded-lg border border-zinc-200 bg-white px-2 py-1.5 text-center">
+                        <p class="text-[9px] text-zinc-400">Your Rank</p>
+                        <p class="text-xs font-black text-zinc-900">#14</p>
+                    </div>
+                </div>
+
+                <div class="max-h-[58vh] space-y-2 overflow-y-auto p-4">
+                    <div class="flex items-center gap-2 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2.5">
+                        <span class="flex h-7 w-7 items-center justify-center rounded-full bg-amber-500 text-[10px] font-black text-white">1</span>
+                        <div class="min-w-0 flex-1"><p class="truncate text-xs font-semibold text-zinc-900">Akash2321</p><p class="text-[10px] text-zinc-500">8 referrals</p></div>
+                        <span class="rounded-full bg-white px-2 py-0.5 text-[10px] font-black text-emerald-700 ring-1 ring-amber-200">৳330</span>
+                    </div>
+                    <div class="flex items-center gap-2 rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5">
+                        <span class="flex h-7 w-7 items-center justify-center rounded-full bg-zinc-700 text-[10px] font-black text-white">2</span>
+                        <div class="min-w-0 flex-1"><p class="truncate text-xs font-semibold text-zinc-900">Biplove111</p><p class="text-[10px] text-zinc-500">5 referrals</p></div>
+                        <span class="rounded-full bg-white px-2 py-0.5 text-[10px] font-black text-emerald-700 ring-1 ring-zinc-200">৳220</span>
+                    </div>
+                    <div class="flex items-center gap-2 rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5">
+                        <span class="flex h-7 w-7 items-center justify-center rounded-full bg-zinc-500 text-[10px] font-black text-white">3</span>
+                        <div class="min-w-0 flex-1"><p class="truncate text-xs font-semibold text-zinc-900">Mainuddin3</p><p class="text-[10px] text-zinc-500">5 referrals</p></div>
+                        <span class="rounded-full bg-white px-2 py-0.5 text-[10px] font-black text-emerald-700 ring-1 ring-zinc-200">৳220</span>
+                    </div>
+                    <div class="flex items-center gap-2 rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5">
+                        <span class="flex h-7 w-7 items-center justify-center rounded-full bg-zinc-300 text-[10px] font-black text-zinc-700">4</span>
+                        <div class="min-w-0 flex-1"><p class="truncate text-xs font-semibold text-zinc-900">Maruf11</p><p class="text-[10px] text-zinc-500">4 referrals</p></div>
+                        <span class="rounded-full bg-white px-2 py-0.5 text-[10px] font-black text-emerald-700 ring-1 ring-zinc-200">৳185</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         {{-- ══════════════════════════════════════════
              MOBILE BOTTOM NAV (hidden on desktop)

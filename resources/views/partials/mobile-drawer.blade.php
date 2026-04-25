@@ -27,12 +27,14 @@
         </a>
         <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-600 hover:bg-zinc-50"><i class="bi bi-list-task text-base"></i>My Tasks</a>
         <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-600 hover:bg-zinc-50"><i class="bi bi-wallet2 text-base"></i>Earnings</a>
+        <a href="{{ route('gift.card') }}" class="flex items-center gap-3 rounded-xl {{ ($active ?? '') === 'gift' ? 'bg-zinc-50 text-zinc-900 font-semibold' : 'text-zinc-600 font-medium hover:bg-zinc-50' }} px-3 py-2.5 text-sm"><i class="bi bi-gift text-base"></i>Gift Card</a>
         <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-600 hover:bg-zinc-50"><i class="bi bi-people text-base"></i>Referrals</a>
         <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-600 hover:bg-zinc-50"><i class="bi bi-bell text-base"></i>Notifications<span class="ml-auto flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[9px] font-black text-white">3</span></a>
+        <a href="{{ route('news.feed') }}" class="flex items-center gap-3 rounded-xl {{ ($active ?? '') === 'feed' ? 'bg-zinc-50 text-zinc-900 font-semibold' : 'text-zinc-600 font-medium hover:bg-zinc-50' }} px-3 py-2.5 text-sm"><i class="bi bi-newspaper text-base"></i>News Feed</a>
         <p class="mb-1 mt-3 px-2 text-[10px] font-bold uppercase tracking-widest text-zinc-300">Account</p>
-        <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-600 hover:bg-zinc-50"><i class="bi bi-person text-base"></i>Profile</a>
+        <a href="{{ route('profile') }}" class="flex items-center gap-3 rounded-xl {{ ($active ?? '') === 'profile' ? 'bg-zinc-50 text-zinc-900 font-semibold' : 'text-zinc-600 font-medium hover:bg-zinc-50' }} px-3 py-2.5 text-sm"><i class="bi bi-person text-base"></i>Profile</a>
         <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-600 hover:bg-zinc-50"><i class="bi bi-gear text-base"></i>Settings</a>
-        <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-600 hover:bg-zinc-50"><i class="bi bi-life-preserver text-base"></i>Support</a>
+        <a href="{{ route('support.ticket') }}" class="flex items-center gap-3 rounded-xl {{ ($active ?? '') === 'support' ? 'bg-zinc-50 text-zinc-900 font-semibold' : 'text-zinc-600 font-medium hover:bg-zinc-50' }} px-3 py-2.5 text-sm"><i class="bi bi-life-preserver text-base"></i>Support</a>
     </nav>
 
     <div class="border-t border-zinc-100 px-4 py-4" style="padding-bottom: max(1rem, env(safe-area-inset-bottom, 1rem))">

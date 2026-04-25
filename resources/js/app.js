@@ -139,7 +139,10 @@ function closeDrawer() {
     drawerPanel?.classList.add('-translate-x-full');
     drawerBackdrop?.classList.add('opacity-0', 'pointer-events-none');
     drawerOpen?.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    const hasOpenModal = Array.from(document.querySelectorAll('[data-modal]')).some((m) => !m.classList.contains('hidden'));
+    if (!hasOpenModal) {
+        document.body.style.overflow = '';
+    }
 }
 
 drawerOpen?.addEventListener('click', openDrawer);
@@ -148,6 +151,56 @@ drawerBackdrop?.addEventListener('click', closeDrawer);
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeDrawer();
+});
+
+// ── Dashboard: Live/Leader modal popups ───────────────────────────────────────
+
+const modalTriggers = document.querySelectorAll('[data-open-modal]');
+const modalCloseButtons = document.querySelectorAll('[data-close-modal]');
+const modalAnimationMs = 240;
+
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    requestAnimationFrame(() => modal.classList.add('is-open'));
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modal) {
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    window.setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }, modalAnimationMs);
+    const drawerVisible = drawerPanel && !drawerPanel.classList.contains('-translate-x-full');
+    if (!drawerVisible) {
+        document.body.style.overflow = '';
+    }
+}
+
+modalTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => openModal(trigger.dataset.openModal));
+});
+
+modalCloseButtons.forEach((btn) => {
+    btn.addEventListener('click', () => closeModal(btn.closest('[data-modal]')));
+});
+
+document.querySelectorAll('[data-modal]').forEach((modal) => {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal(modal);
+        }
+    });
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('[data-modal]').forEach((modal) => closeModal(modal));
+    }
 });
 
 // ── Referral link copy ───────────────────────────────────────────────────────

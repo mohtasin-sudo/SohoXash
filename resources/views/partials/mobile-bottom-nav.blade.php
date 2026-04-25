@@ -17,8 +17,8 @@
         <span class="nl">Alerts</span>
         <span class="nav-badge"></span>
     </a>
-    <a href="#">
-        <span class="ni"><i class="bi bi-chat-dots"></i></span>
-        <span class="nl">Messages</span>
+    <a href="{{ route('news.feed') }}" class="{{ ($active ?? '') === 'feed' ? 'active' : '' }}">
+        <span class="ni"><i class="bi bi-newspaper"></i></span>
+        <span class="nl">Feed</span>
     </a>
 </nav>
