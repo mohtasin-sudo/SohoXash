@@ -13,7 +13,7 @@
     <body class="bg-zinc-50 text-zinc-900 antialiased">
         @include('partials.desktop-sidebar', ['active' => 'support'])
 
-        <div class="w-full bg-white md:ml-56 md:min-h-screen">
+        <div class="w-full bg-zinc-50 md:ml-56 md:min-h-screen">
 
             <header class="dash-header">
                 <button
@@ -45,13 +45,13 @@
                 </button>
             </header>
 
-            <main class="space-y-3 px-4 py-4 pb-28">
-                <section class="card p-4">
-                    <h1 class="text-2xl font-black tracking-[-0.04em] text-zinc-900">Support Tickets</h1>
-                    <p class="mt-1 text-xs text-zinc-400">Create ticket and track response status.</p>
+            <main class="page-shell">
+                <section class="section-hero">
+                    <h1 class="text-2xl font-black tracking-[-0.04em] text-white">Support Tickets</h1>
+                    <p class="mt-1 text-xs text-zinc-200">Create ticket and track response status.</p>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <div class="mb-3 flex items-center justify-between">
                         <p class="text-sm font-bold text-zinc-900">Create New Ticket</p>
                         <span class="rounded-full border border-zinc-100 bg-zinc-50 px-2 py-0.5 text-[10px] font-semibold text-zinc-500">Avg. reply 15 min</span>
@@ -88,24 +88,24 @@
                     </form>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <p class="text-sm font-bold text-zinc-900">Recent Tickets</p>
                     <div class="mt-3 space-y-2.5">
-                        <a href="{{ route('support.ticket.show', ['ticketId' => 'TK-10029']) }}" class="block rounded-xl border border-zinc-100 bg-zinc-50 p-3 transition-colors hover:bg-zinc-100">
+                        <a href="{{ route('support.ticket.show', ['ticketId' => 'TK-10029']) }}" class="block section-soft transition-colors hover:bg-zinc-100">
                             <div class="flex items-center justify-between">
                                 <p class="text-xs font-bold text-zinc-900">#TK-10029 · Withdrawal delayed</p>
                                 <span class="rounded-full border border-amber-100 bg-amber-50 px-2 py-0.5 text-[10px] font-semibold text-amber-700">Pending</span>
                             </div>
                             <p class="mt-1 text-[11px] text-zinc-400">Opened 2 hours ago · Tap to view</p>
                         </a>
-                        <a href="{{ route('support.ticket.show', ['ticketId' => 'TK-10010']) }}" class="block rounded-xl border border-zinc-100 bg-zinc-50 p-3 transition-colors hover:bg-zinc-100">
+                        <a href="{{ route('support.ticket.show', ['ticketId' => 'TK-10010']) }}" class="block section-soft transition-colors hover:bg-zinc-100">
                             <div class="flex items-center justify-between">
                                 <p class="text-xs font-bold text-zinc-900">#TK-10010 · Task proof not accepted</p>
                                 <span class="rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[10px] font-semibold text-blue-700">In Review</span>
                             </div>
                             <p class="mt-1 text-[11px] text-zinc-400">Opened yesterday · Tap to view</p>
                         </a>
-                        <a href="{{ route('support.ticket.show', ['ticketId' => 'TK-9988']) }}" class="block rounded-xl border border-zinc-100 bg-zinc-50 p-3 transition-colors hover:bg-zinc-100">
+                        <a href="{{ route('support.ticket.show', ['ticketId' => 'TK-9988']) }}" class="block section-soft transition-colors hover:bg-zinc-100">
                             <div class="flex items-center justify-between">
                                 <p class="text-xs font-bold text-zinc-900">#TK-9988 · Email change request</p>
                                 <span class="rounded-full border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-700">Resolved</span>

@@ -11,10 +11,10 @@
         <button type="button" id="drawer-close" aria-label="Close menu" class="flex h-8 w-8 items-center justify-center rounded-lg text-zinc-400 hover:bg-zinc-100"><i class="bi bi-x-lg"></i></button>
     </div>
 
-    <div class="mx-4 mt-3 rounded-xl bg-emerald-50 px-4 py-3 ring-1 ring-emerald-100">
-        <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-600">Pro Wallet</p>
-        <p class="mt-0.5 text-2xl font-black tracking-[-0.04em] text-emerald-600">৳50.00</p>
-        <a href="#" class="mt-2 inline-flex text-xs font-semibold text-emerald-700">Withdraw →</a>
+    <div class="mx-4 mt-3 rounded-xl border border-emerald-100 bg-emerald-50/70 px-4 py-3">
+        <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-700">Pro Wallet</p>
+        <p class="mt-0.5 text-2xl font-black tracking-[-0.04em] text-emerald-700">৳50.00</p>
+        <p class="mt-1 text-xs font-medium text-emerald-700/85">Safe and quick withdraw</p>
     </div>
 
     <nav class="mt-3 flex-1 overflow-y-auto px-3 pb-4">
@@ -22,13 +22,13 @@
         <a href="{{ route('dashboard') }}" class="flex items-center gap-3 rounded-xl {{ ($active ?? '') === 'dashboard' ? 'bg-zinc-50 text-zinc-900 font-semibold' : 'text-zinc-600 font-medium hover:bg-zinc-50' }} px-3 py-2.5 text-sm">
             <i class="bi bi-house-door text-base"></i>Dashboard
         </a>
-        <a href="{{ route('partner') }}" class="flex items-center gap-3 rounded-xl {{ ($active ?? '') === 'partner' ? 'bg-zinc-50 text-zinc-900 font-semibold' : 'text-zinc-600 font-medium hover:bg-zinc-50' }} px-3 py-2.5 text-sm">
-            <i class="bi bi-diagram-3 text-base"></i>Partner
-        </a>
         <a href="{{ route('jobs.index') }}" class="flex items-center gap-3 rounded-xl {{ ($active ?? '') === 'tasks' ? 'bg-zinc-50 text-zinc-900 font-semibold' : 'text-zinc-600 font-medium hover:bg-zinc-50' }} px-3 py-2.5 text-sm"><i class="bi bi-list-task text-base"></i>My Jobs</a>
         <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-600 hover:bg-zinc-50"><i class="bi bi-wallet2 text-base"></i>Earnings</a>
         <a href="{{ route('gift.card') }}" class="flex items-center gap-3 rounded-xl {{ ($active ?? '') === 'gift' ? 'bg-zinc-50 text-zinc-900 font-semibold' : 'text-zinc-600 font-medium hover:bg-zinc-50' }} px-3 py-2.5 text-sm"><i class="bi bi-gift text-base"></i>Gift Card</a>
         <a href="{{ route('referrals') }}" class="flex items-center gap-3 rounded-xl {{ ($active ?? '') === 'referrals' ? 'bg-zinc-50 text-zinc-900 font-semibold' : 'text-zinc-600 font-medium hover:bg-zinc-50' }} px-3 py-2.5 text-sm"><i class="bi bi-people text-base"></i>Referrals</a>
+        <a href="{{ route('partner') }}" class="flex items-center gap-3 rounded-xl {{ ($active ?? '') === 'partner' ? 'bg-zinc-50 text-zinc-900 font-semibold' : 'text-zinc-600 font-medium hover:bg-zinc-50' }} px-3 py-2.5 text-sm">
+            <i class="bi bi-diagram-3 text-base"></i>Partner
+        </a>
         <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-600 hover:bg-zinc-50"><i class="bi bi-bell text-base"></i>Notifications<span class="ml-auto flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[9px] font-black text-white">3</span></a>
         <a href="{{ route('news.feed') }}" class="flex items-center gap-3 rounded-xl {{ ($active ?? '') === 'feed' ? 'bg-zinc-50 text-zinc-900 font-semibold' : 'text-zinc-600 font-medium hover:bg-zinc-50' }} px-3 py-2.5 text-sm"><i class="bi bi-newspaper text-base"></i>News Feed</a>
         <p class="mb-1 mt-3 px-2 text-[10px] font-bold uppercase tracking-widest text-zinc-300">Account</p>

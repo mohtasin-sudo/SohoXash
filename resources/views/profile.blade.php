@@ -13,7 +13,7 @@
     <body class="bg-zinc-50 text-zinc-900 antialiased">
         @include('partials.desktop-sidebar', ['active' => 'profile'])
 
-        <div class="w-full bg-white md:ml-56 md:min-h-screen">
+        <div class="w-full bg-zinc-50 md:ml-56 md:min-h-screen">
 
             <header class="dash-header">
                 <button
@@ -45,14 +45,14 @@
                 </button>
             </header>
 
-            <main class="space-y-3 px-4 py-4 pb-28">
+            <main class="page-shell">
 
-                <section class="rounded-2xl border border-zinc-100 bg-white p-4 text-center">
-                    <h1 class="text-3xl font-black tracking-[-0.04em] text-zinc-900">Personal Data</h1>
-                    <p class="mt-1 text-xs text-zinc-400">Update your account and security details</p>
+                <section class="section-hero text-center">
+                    <h1 class="text-3xl font-black tracking-[-0.04em] text-white">Personal Data</h1>
+                    <p class="mt-1 text-xs text-zinc-200">Update your account and security details</p>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <div class="flex items-center gap-3">
                         <div class="relative">
                             <div class="flex h-16 w-16 items-center justify-center rounded-full bg-zinc-100 text-zinc-400">
@@ -72,7 +72,7 @@
                     </div>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <form class="space-y-2.5">
                         <label class="auth-field">
                             <span class="auth-field-label">First Name</span>
@@ -113,7 +113,7 @@
                     </form>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <p class="text-sm font-bold text-zinc-900">Change Password</p>
                     <form class="mt-2.5 space-y-2.5">
                         <label class="auth-field">
@@ -132,7 +132,7 @@
                     </form>
                 </section>
 
-                <section class="card border-red-100 p-4">
+                <section class="section-card border-red-100">
                     <p class="text-sm font-bold text-red-500">Danger Zone</p>
                     <p class="mt-1 text-xs text-zinc-400">This action is permanent and cannot be undone.</p>
                     <button type="button" class="btn mt-3 w-full justify-center border border-red-100 bg-red-50 py-3 text-red-500 hover:bg-red-100">

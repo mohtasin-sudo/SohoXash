@@ -20,7 +20,22 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: #09090b;
-        background: #ffffff;
+        background: #f8fafc;
+    }
+
+    /* Improve readability for tiny gray helper text across pages */
+    .text-xs.text-zinc-400,
+    .text-\[10px\].text-zinc-400,
+    .text-\[11px\].text-zinc-400,
+    .text-\[10px\].text-zinc-500,
+    .text-\[11px\].text-zinc-500 {
+        color: #52525b;
+        font-weight: 500;
+    }
+
+    .auth-field-label {
+        color: #52525b;
+        font-weight: 700;
     }
 
     button,
@@ -67,11 +82,11 @@
         align-items: center;
         justify-content: center;
         gap: 0.5rem;
-        min-height: 2.75rem;
-        padding-inline: 1.25rem;
-        border-radius: 0.75rem;
-        font-size: 0.9375rem;
-        font-weight: 600;
+        min-height: 2.625rem;
+        padding-inline: 1.1rem;
+        border-radius: 0.8rem;
+        font-size: 0.9rem;
+        font-weight: 700;
         letter-spacing: -0.01em;
         white-space: nowrap;
         cursor: pointer;
@@ -153,9 +168,9 @@
 
     .card {
         background: #ffffff;
-        border: 1px solid #e4e4e7;
-        border-radius: 1.25rem;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+        border: 1px solid #e5e7eb;
+        border-radius: 1rem;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 6px 16px rgba(0, 0, 0, 0.03);
     }
 
     .card-flat {
@@ -363,8 +378,8 @@
         width: 100%;
         background: #ffffff;
         border: 1px solid #e4e4e7;
-        border-radius: 1.5rem;
-        padding: 1.75rem;
+        border-radius: 1.1rem;
+        padding: 1.35rem;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
     }
 
@@ -463,8 +478,10 @@
         justify-content: space-between;
         gap: 0.75rem;
         padding: 0.875rem 1rem;
-        background: #ffffff;
+        background: rgba(255, 255, 255, 0.96);
         border-bottom: 1px solid #f3f4f6;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         box-shadow: 0 1px 0 #f3f4f6;
         position: sticky;
         top: 0;
@@ -900,6 +917,81 @@
     .modal-overlay.is-open .modal-card {
         opacity: 1;
         transform: translateY(0) scale(1);
+    }
+
+    /* ─────────────────────────────────────────────
+       PAGE SECTION SYSTEM
+    ───────────────────────────────────────────── */
+
+    .page-shell {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        padding-bottom: max(5rem, calc(4rem + env(safe-area-inset-bottom, 0px)));
+    }
+
+    .section-card {
+        background: linear-gradient(180deg, #ffffff 0%, #fcfcfd 100%);
+        border: 1px solid #e5e7eb;
+        border-radius: 1rem;
+        padding: 1rem;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 10px 22px rgba(0, 0, 0, 0.02);
+    }
+
+    .section-soft {
+        background: linear-gradient(180deg, #fafafa 0%, #f4f4f5 100%);
+        border: 1px solid #e4e4e7;
+        border-radius: 0.875rem;
+        padding: 0.75rem;
+    }
+
+    .section-hero {
+        overflow: hidden;
+        border-radius: 1rem;
+        border: 1px solid #27272a;
+        background: radial-gradient(circle at top right, #52525b 0%, #27272a 42%, #09090b 100%);
+        padding: 1rem;
+        color: #ffffff;
+    }
+
+    .section-title-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .micro-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        border-radius: 999px;
+        border: 1px solid #e5e7eb;
+        background: #fafafa;
+        padding: 0.3rem 0.65rem;
+        font-size: 0.625rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        color: #52525b;
+        white-space: nowrap;
+    }
+
+    .stat-tile {
+        border-radius: 0.75rem;
+        border: 1px solid #e5e7eb;
+        background: #fafafa;
+        padding: 0.625rem 0.75rem;
+    }
+
+    @media (min-width: 768px) {
+        .page-shell {
+            gap: 1.1rem;
+            padding-inline: 1.5rem;
+            padding-top: 1.25rem;
+            padding-bottom: 1.5rem;
+        }
     }
 }
 

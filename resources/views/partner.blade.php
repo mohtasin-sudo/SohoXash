@@ -13,7 +13,7 @@
     <body class="bg-zinc-50 text-zinc-900 antialiased">
         @include('partials.desktop-sidebar', ['active' => 'partner'])
 
-        <div class="w-full bg-white md:ml-56 md:min-h-screen">
+        <div class="w-full bg-zinc-50 md:ml-56 md:min-h-screen">
 
             <header class="dash-header">
                 <button
@@ -45,9 +45,9 @@
                 </button>
             </header>
 
-            <main class="space-y-3 px-4 py-4 pb-28">
+            <main class="page-shell">
 
-                <section class="overflow-hidden rounded-2xl border border-zinc-100 bg-gradient-to-r from-zinc-900 to-zinc-700 p-4 text-white">
+                <section class="section-hero">
                     <p class="text-[10px] font-bold uppercase tracking-widest text-zinc-300">Partner Program</p>
                     <h1 class="mt-1 text-xl font-black tracking-[-0.03em]">Freely Partner Application</h1>
                     <p class="mt-1.5 text-xs leading-5 text-zinc-200">
@@ -55,7 +55,7 @@
                     </p>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <h2 class="text-sm font-black text-zinc-900">Why join partner program?</h2>
                     <div class="mt-2 space-y-2 text-xs text-zinc-500">
                         <p>Get priority task access and stronger earning potential from referrals.</p>
@@ -64,17 +64,17 @@
                     </div>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <h2 class="text-sm font-black text-zinc-900">Partner Benefits</h2>
                     <div class="mt-3 grid gap-2">
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5 text-xs font-medium text-zinc-600">High conversion referral campaign tools</div>
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5 text-xs font-medium text-zinc-600">Priority review for submitted proofs</div>
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5 text-xs font-medium text-zinc-600">Weekly performance insights and tips</div>
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5 text-xs font-medium text-zinc-600">Direct support line for partner members</div>
+                        <div class="section-soft text-xs font-medium text-zinc-600">High conversion referral campaign tools</div>
+                        <div class="section-soft text-xs font-medium text-zinc-600">Priority review for submitted proofs</div>
+                        <div class="section-soft text-xs font-medium text-zinc-600">Weekly performance insights and tips</div>
+                        <div class="section-soft text-xs font-medium text-zinc-600">Direct support line for partner members</div>
                     </div>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <h2 class="text-sm font-black text-zinc-900">Apply for Partner Program</h2>
                     <p class="mt-1 text-xs text-zinc-400">Fill all required fields to submit your request.</p>
 

@@ -13,7 +13,7 @@
     <body class="bg-zinc-50 text-zinc-900 antialiased">
         @include('partials.desktop-sidebar', ['active' => 'referrals'])
 
-        <div class="w-full bg-white md:ml-56 md:min-h-screen">
+        <div class="w-full bg-zinc-50 md:ml-56 md:min-h-screen">
 
             <header class="dash-header">
                 <button
@@ -45,29 +45,29 @@
                 </button>
             </header>
 
-            <main class="space-y-3 px-4 py-4 pb-28">
-                <section class="card p-4">
+            <main class="page-shell">
+                <section class="section-card">
                     <div class="mb-2.5 flex items-center justify-between">
                         <h1 class="text-lg font-black tracking-[-0.03em] text-zinc-900">Referral Dashboard</h1>
                         <span class="rounded-full border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-700">Level 4 Enabled</span>
                     </div>
                     <div class="grid grid-cols-3 gap-2">
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 px-2.5 py-2 text-center">
+                        <div class="stat-tile text-center">
                             <p class="text-[9px] text-zinc-400">Direct Users</p>
                             <p class="text-sm font-black text-zinc-900">24</p>
                         </div>
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 px-2.5 py-2 text-center">
+                        <div class="stat-tile text-center">
                             <p class="text-[9px] text-zinc-400">Team Total</p>
                             <p class="text-sm font-black text-zinc-900">184</p>
                         </div>
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 px-2.5 py-2 text-center">
+                        <div class="stat-tile text-center">
                             <p class="text-[9px] text-zinc-400">This Month</p>
                             <p class="text-sm font-black text-emerald-700">৳1,920</p>
                         </div>
                     </div>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <div class="mb-2.5 flex items-center justify-between">
                         <p class="text-sm font-bold text-zinc-900">Your Referral Link</p>
                         <span class="rounded-full border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-700">Active</span>
@@ -78,7 +78,7 @@
                     </div>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <p class="text-sm font-bold text-zinc-900">Level Commission Plan</p>
                     <div class="mt-3 space-y-2">
                         <div class="flex items-center justify-between rounded-xl border border-emerald-100 bg-emerald-50 px-3 py-2.5"><span class="text-xs font-semibold text-zinc-700">Level 1 (Direct)</span><span class="text-xs font-black text-emerald-700">20%</span></div>
@@ -88,29 +88,29 @@
                     </div>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <p class="text-sm font-bold text-zinc-900">Team Data</p>
                     <div class="mt-3 grid grid-cols-2 gap-2">
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5">
+                        <div class="stat-tile">
                             <p class="text-[10px] text-zinc-400">Total Team Size</p>
                             <p class="mt-0.5 text-sm font-black text-zinc-900">184</p>
                         </div>
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5">
+                        <div class="stat-tile">
                             <p class="text-[10px] text-zinc-400">Active This Week</p>
                             <p class="mt-0.5 text-sm font-black text-zinc-900">62</p>
                         </div>
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5">
+                        <div class="stat-tile">
                             <p class="text-[10px] text-zinc-400">Total Referral Income</p>
                             <p class="mt-0.5 text-sm font-black text-emerald-700">৳12,480</p>
                         </div>
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5">
+                        <div class="stat-tile">
                             <p class="text-[10px] text-zinc-400">This Month Income</p>
                             <p class="mt-0.5 text-sm font-black text-emerald-700">৳1,920</p>
                         </div>
                     </div>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <div class="mb-2.5 flex items-center justify-between">
                         <p class="text-sm font-bold text-zinc-900">Level-wise Team Count</p>
                         <span class="text-[10px] text-zinc-400">Updated daily</span>
@@ -123,13 +123,13 @@
                     </div>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <div class="mb-2.5 flex items-center justify-between">
                         <p class="text-sm font-bold text-zinc-900">Joined By Your Referral</p>
                         <a href="#" class="text-[11px] font-semibold text-zinc-500 hover:text-zinc-900">View all</a>
                     </div>
                     <div class="space-y-2">
-                        <div class="flex items-center gap-2.5 rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5">
+                        <div class="flex items-center gap-2.5 section-soft">
                             <span class="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-900 text-[10px] font-black text-white">RA</span>
                             <div class="min-w-0 flex-1">
                                 <p class="truncate text-xs font-semibold text-zinc-900">Rahat Ahmed</p>
@@ -137,7 +137,7 @@
                             </div>
                             <span class="rounded-full border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-700">Active</span>
                         </div>
-                        <div class="flex items-center gap-2.5 rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5">
+                        <div class="flex items-center gap-2.5 section-soft">
                             <span class="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-900 text-[10px] font-black text-white">SI</span>
                             <div class="min-w-0 flex-1">
                                 <p class="truncate text-xs font-semibold text-zinc-900">Siam Khan</p>
@@ -145,7 +145,7 @@
                             </div>
                             <span class="rounded-full border border-blue-100 bg-blue-50 px-2 py-0.5 text-[10px] font-semibold text-blue-700">New</span>
                         </div>
-                        <div class="flex items-center gap-2.5 rounded-xl border border-zinc-100 bg-zinc-50 px-3 py-2.5">
+                        <div class="flex items-center gap-2.5 section-soft">
                             <span class="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-900 text-[10px] font-black text-white">ME</span>
                             <div class="min-w-0 flex-1">
                                 <p class="truncate text-xs font-semibold text-zinc-900">Mehedi Hasan</p>
@@ -160,7 +160,7 @@
 
         @include('partials.footer', ['class' => 'border-t border-zinc-100 bg-white'])
         @include('partials.mobile-drawer', ['active' => 'referrals'])
-        @include('partials.mobile-bottom-nav')
+        @include('partials.mobile-bottom-nav', ['active' => 'referrals'])
 
     </body>
 </html>

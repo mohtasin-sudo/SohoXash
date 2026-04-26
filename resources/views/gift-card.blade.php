@@ -13,7 +13,7 @@
     <body class="bg-zinc-50 text-zinc-900 antialiased">
         @include('partials.desktop-sidebar', ['active' => 'gift'])
 
-        <div class="w-full bg-white md:ml-56 md:min-h-screen">
+        <div class="w-full bg-zinc-50 md:ml-56 md:min-h-screen">
 
             <header class="dash-header">
                 <button
@@ -45,8 +45,8 @@
                 </button>
             </header>
 
-            <main class="space-y-3 px-4 py-4 pb-28">
-                <section class="overflow-hidden rounded-2xl border border-zinc-100 bg-gradient-to-r from-zinc-900 to-zinc-700 p-4 text-white">
+            <main class="page-shell">
+                <section class="section-hero">
                     <p class="text-[10px] font-bold uppercase tracking-widest text-zinc-300">Bonus Center</p>
                     <h1 class="mt-1 text-xl font-black tracking-[-0.03em]">Redeem Gift Card</h1>
                     <p class="mt-1.5 text-xs leading-5 text-zinc-200">
@@ -54,7 +54,7 @@
                     </p>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <p class="text-sm font-bold text-zinc-900">Gift Card Number</p>
                     <p class="mt-1 text-xs text-zinc-400">Use a valid card number provided by SohoXash campaigns.</p>
 
@@ -69,20 +69,20 @@
                     </form>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <div class="mb-2.5 flex items-center justify-between">
                         <p class="text-sm font-bold text-zinc-900">Recent Redeem History</p>
                         <span class="rounded-full border border-zinc-100 bg-zinc-50 px-2 py-0.5 text-[10px] font-semibold text-zinc-500">Latest</span>
                     </div>
                     <div class="space-y-2">
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 p-3">
+                        <div class="section-soft">
                             <div class="flex items-center justify-between">
                                 <p class="text-xs font-bold text-zinc-900">SX-GIFT-4K9A-1172</p>
                                 <span class="rounded-full border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-700">Success</span>
                             </div>
                             <p class="mt-1 text-[11px] text-zinc-400">Bonus +৳120 · Redeemed 2 days ago</p>
                         </div>
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 p-3">
+                        <div class="section-soft">
                             <div class="flex items-center justify-between">
                                 <p class="text-xs font-bold text-zinc-900">SX-GIFT-ABCD-9091</p>
                                 <span class="rounded-full border border-amber-100 bg-amber-50 px-2 py-0.5 text-[10px] font-semibold text-amber-700">Used</span>

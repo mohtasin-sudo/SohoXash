@@ -13,7 +13,7 @@
     <body class="bg-zinc-50 text-zinc-900 antialiased">
         @include('partials.desktop-sidebar', ['active' => 'tasks'])
 
-        <div class="w-full bg-white md:ml-56 md:min-h-screen">
+        <div class="w-full bg-zinc-50 md:ml-56 md:min-h-screen">
             <header class="dash-header">
                 <a href="{{ route('jobs.index') }}" class="flex h-9 w-9 flex-none items-center justify-center rounded-xl border border-zinc-100 text-zinc-500 transition-all hover:border-zinc-300" aria-label="Back to my jobs">
                     <i class="bi bi-arrow-left"></i>
@@ -25,30 +25,30 @@
                 <span class="text-xs font-semibold text-zinc-400">Details</span>
             </header>
 
-            <main class="space-y-3 px-4 py-4 pb-28">
-                <section class="card p-4">
+            <main class="page-shell">
+                <section class="section-card">
                     <div class="mb-2 flex items-center justify-between">
                         <p class="text-xs font-bold text-zinc-900">#{{ $jobId }}</p>
                         <span class="rounded-full border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-700">Available</span>
                     </div>
                     <h1 class="text-lg font-black tracking-[-0.03em] text-zinc-900">Install app and submit proof screenshot</h1>
                     <div class="mt-2 grid grid-cols-3 gap-2">
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 px-2.5 py-2">
+                        <div class="stat-tile">
                             <p class="text-[10px] text-zinc-400">Reward</p>
                             <p class="text-sm font-black text-emerald-700">৳35</p>
                         </div>
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 px-2.5 py-2">
+                        <div class="stat-tile">
                             <p class="text-[10px] text-zinc-400">Estimated</p>
                             <p class="text-sm font-black text-zinc-900">4 min</p>
                         </div>
-                        <div class="rounded-xl border border-zinc-100 bg-zinc-50 px-2.5 py-2">
+                        <div class="stat-tile">
                             <p class="text-[10px] text-zinc-400">Slots Left</p>
                             <p class="text-sm font-black text-zinc-900">42</p>
                         </div>
                     </div>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <p class="text-sm font-bold text-zinc-900">Instructions</p>
                     <ol class="mt-2 space-y-2 text-xs leading-5 text-zinc-600">
                         <li>1. Click the task link and install the target app.</li>
@@ -58,7 +58,7 @@
                     </ol>
                 </section>
 
-                <section class="card p-4">
+                <section class="section-card">
                     <p class="text-sm font-bold text-zinc-900">Submit Job Proof</p>
                     <p class="mt-1 text-xs text-zinc-400">Submission will be reviewed by admin in 5-30 minutes.</p>
                     <form method="POST" action="#" class="mt-3 space-y-2.5">

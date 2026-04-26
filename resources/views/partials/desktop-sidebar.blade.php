@@ -4,19 +4,16 @@
         <span class="text-base font-black tracking-[-0.04em]">SohoXash</span>
     </div>
 
-    <div class="mx-4 mt-3.5 rounded-xl bg-emerald-50 px-3.5 py-3 ring-1 ring-emerald-100">
-        <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-600">Pro Wallet</p>
-        <p class="mt-0.5 text-xl font-black tracking-[-0.04em] text-emerald-600">৳50.00</p>
-        <a href="#" class="mt-1.5 inline-flex text-xs font-semibold text-emerald-700 hover:text-emerald-900">Withdraw →</a>
+    <div class="mx-4 mt-3.5 rounded-xl border border-emerald-100 bg-emerald-50/70 px-3.5 py-3">
+        <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-700">Pro Wallet</p>
+        <p class="mt-0.5 text-xl font-black tracking-[-0.04em] text-emerald-700">৳50.00</p>
+        <p class="mt-1 text-[11px] font-medium text-emerald-700/80">Withdraw anytime</p>
     </div>
 
     <nav class="mt-3 flex-1 overflow-y-auto px-3 pb-4">
         <p class="mb-1 px-2 text-[10px] font-bold uppercase tracking-widest text-zinc-300">Menu</p>
         <a href="{{ route('dashboard') }}" class="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm {{ ($active ?? '') === 'dashboard' ? 'bg-zinc-50 font-semibold text-zinc-900' : 'font-medium text-zinc-500 hover:bg-zinc-50 hover:text-zinc-900' }}">
             <i class="bi bi-house-door text-base"></i>Dashboard
-        </a>
-        <a href="{{ route('partner') }}" class="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm {{ ($active ?? '') === 'partner' ? 'bg-zinc-50 font-semibold text-zinc-900' : 'font-medium text-zinc-500 hover:bg-zinc-50 hover:text-zinc-900' }}">
-            <i class="bi bi-diagram-3 text-base"></i>Partner
         </a>
         <a href="{{ route('jobs.index') }}" class="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm {{ ($active ?? '') === 'tasks' ? 'bg-zinc-50 font-semibold text-zinc-900' : 'font-medium text-zinc-500 hover:bg-zinc-50 hover:text-zinc-900' }}">
             <i class="bi bi-list-task text-base"></i>My Jobs
@@ -29,6 +26,9 @@
         </a>
         <a href="{{ route('gift.card') }}" class="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm {{ ($active ?? '') === 'gift' ? 'bg-zinc-50 font-semibold text-zinc-900' : 'font-medium text-zinc-500 hover:bg-zinc-50 hover:text-zinc-900' }}">
             <i class="bi bi-gift text-base"></i>Gift Card
+        </a>
+        <a href="{{ route('partner') }}" class="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm {{ ($active ?? '') === 'partner' ? 'bg-zinc-50 font-semibold text-zinc-900' : 'font-medium text-zinc-500 hover:bg-zinc-50 hover:text-zinc-900' }}">
+            <i class="bi bi-diagram-3 text-base"></i>Partner
         </a>
         <a href="{{ route('support.ticket') }}" class="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm {{ ($active ?? '') === 'support' ? 'bg-zinc-50 font-semibold text-zinc-900' : 'font-medium text-zinc-500 hover:bg-zinc-50 hover:text-zinc-900' }}">
             <i class="bi bi-life-preserver text-base"></i>Support

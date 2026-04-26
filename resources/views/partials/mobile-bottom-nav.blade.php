@@ -3,13 +3,13 @@
         <span class="ni"><i class="bi bi-house-door"></i></span>
         <span class="nl">Home</span>
     </a>
-    <a href="#">
-        <span class="ni"><i class="bi bi-search"></i></span>
-        <span class="nl">Search</span>
+    <a href="{{ route('referrals') }}" class="{{ ($active ?? '') === 'referrals' ? 'active' : '' }}">
+        <span class="ni"><i class="bi bi-people"></i></span>
+        <span class="nl">Refer</span>
     </a>
     <a href="{{ route('jobs.index') }}" class="relative {{ ($active ?? '') === 'tasks' ? 'active' : '' }}">
         <span class="ni"><i class="bi bi-list-task"></i></span>
-        <span class="nl">Tasks</span>
+        <span class="nl">Jobs</span>
         <span class="nav-badge"></span>
     </a>
     <a href="#" class="relative">

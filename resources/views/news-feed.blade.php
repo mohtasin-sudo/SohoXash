@@ -13,7 +13,7 @@
     <body class="bg-zinc-50 text-zinc-900 antialiased">
         @include('partials.desktop-sidebar', ['active' => 'feed'])
 
-        <div class="w-full bg-white md:ml-56 md:min-h-screen">
+        <div class="w-full bg-zinc-50 md:ml-56 md:min-h-screen">
 
             <header class="dash-header">
                 <button
@@ -45,9 +45,9 @@
                 </button>
             </header>
 
-            <main class="space-y-3 px-4 py-4 pb-28">
+            <main class="page-shell">
                 <section class="space-y-2.5">
-                    <article class="card p-4">
+                    <article class="section-card">
                         <div class="mb-2.5 flex items-center gap-2">
                             <span class="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-900 text-[10px] font-black text-white">AD</span>
                             <div class="min-w-0 flex-1">
@@ -70,7 +70,7 @@
                         </div>
                     </article>
 
-                    <article class="card p-4">
+                    <article class="section-card">
                         <div class="mb-2.5 flex items-center gap-2">
                             <span class="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-900 text-[10px] font-black text-white">AD</span>
                             <div class="min-w-0 flex-1">
@@ -93,7 +93,7 @@
                         </div>
                     </article>
 
-                    <article class="card p-4">
+                    <article class="section-card">
                         <div class="mb-2.5 flex items-center gap-2">
                             <span class="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-900 text-[10px] font-black text-white">AD</span>
                             <div class="min-w-0 flex-1">

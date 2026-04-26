@@ -102,13 +102,13 @@
             {{-- ══════════════════════════════════════════
                  CONTENT — single col mobile / 2-col desktop
             ══════════════════════════════════════════ --}}
-            <div class="px-4 py-4 pb-28 md:grid md:grid-cols-[1fr_17rem] md:items-start md:gap-6 md:px-6 md:py-6 md:pb-6">
+            <div class="px-4 py-4 pb-20 md:grid md:grid-cols-[1fr_17rem] md:items-start md:gap-6 md:px-6 md:py-6 md:pb-6">
 
                 {{-- ── LEFT / MAIN COLUMN ── --}}
-                <main class="space-y-3 md:space-y-4">
+                <main class="space-y-4">
 
                     {{-- Wallet + financial summary --}}
-                    <section aria-label="Wallets and financial summary" class="card p-3.5">
+                    <section aria-label="Wallets and financial summary" class="section-card p-3.5">
                         <div class="grid grid-cols-3 gap-2">
                             <div class="rounded-xl border border-blue-100 bg-blue-50 px-2.5 py-2">
                                 <p class="text-[9px] font-bold uppercase tracking-widest text-blue-600">Lite</p>
@@ -150,7 +150,7 @@
                                 <button data-period="month" class="rounded-md px-3 py-1.5 text-xs font-semibold text-zinc-400">Month</button>
                             </div>
                         </div>
-                        <div class="card p-4">
+                        <div class="section-card">
                             <p class="mb-3 text-xs font-medium text-zinc-400">Apr 25 – Apr 26, 2026</p>
                             <div class="flex h-16 items-end gap-0.5">
                                 @foreach ([15, 35, 20, 55, 40, 75, 50, 30, 65, 45, 25, 60, 70, 10, 80, 45, 20, 55, 35, 65] as $h)
@@ -168,7 +168,7 @@
 
                     {{-- Referral link --}}
                     <section aria-label="Referral link">
-                        <div class="card p-4">
+                        <div class="section-card">
                             <div class="mb-2.5 flex items-center justify-between">
                                 <p class="text-sm font-bold text-zinc-900">Your Referral Link</p>
                                 <span class="earn-pill">+৳50 / refer</span>
